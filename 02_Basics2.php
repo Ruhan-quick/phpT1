@@ -18,12 +18,29 @@
         max-width: 80%;
         background-color: gray;
         margin: auto;
+        padding: 20px;
     }
 </style>
 
 <body>
     <div class="container">
+
         Bismillah, This is a container.
+        <h1>Let's Learn about php</h1>
+
+        <?php
+        $age = 27;
+        if ($age > 20) {
+            echo "You are in";
+        } else {
+            echo " You are out";
+        }
+        echo "<br/>";
+        $lang = array("c++", "python", "php", "js", "java");
+        echo $lang[2];
+        echo "<br/>";
+        echo count($lang);
+        ?>
     </div>
 </body>
 
