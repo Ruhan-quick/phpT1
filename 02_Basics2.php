@@ -40,7 +40,41 @@
         echo $lang[2];
         echo "<br/>";
         echo count($lang);
+        $a = 0;
+        while ($a <= 10) {
+            # code...
+            echo "This is the value of current a: ";
+            echo $a++;
+            echo "<br/>";
+        }
+        $a = 0;
+        while ($a < count($lang)) {
+            # code...
+            echo "This is the value of current lang: ";
+            echo $lang[$a];
+            echo "<br/>";
+            $a++;
+        }
+        foreach ($lang as $val) {
+            echo "<br/> Lang: ";
+            echo $val;
+        }
+
+        function print5()
+        {
+            echo "Five";
+        }
+
+        print5();
+        print5();
+        print5();
+
+
+
         ?>
+        <script>
+            console.log("hello");
+        </script>
     </div>
 </body>
 
