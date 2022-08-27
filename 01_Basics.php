@@ -10,6 +10,25 @@
 
 <body>
     <h1> Bismillah </h1>
+    <?php
+    echo "Alhamdulillah";
+
+    //
+    ?>
+    <?php
+    echo "Alhamdulillah";
+    // Lorem ipsum dolor sit.
+    //asdf
+    ?>
+    <?php
+    $var1 = 35;
+    $var2 = 67;
+    echo "SubahanAllah ";
+    echo $var1;
+    echo $var1 + $var2;
+
+    //
+    ?>
 </body>
 
 </html>
