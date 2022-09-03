@@ -1,5 +1,6 @@
 <?php
 // session_start();
+$insert_done = false;
 if (isset($_POST['name'])) {
     $DH = '127.0.0.1:3309';
     $DN = 'sform';
@@ -23,10 +24,11 @@ if (isset($_POST['name'])) {
 
     $sql = "INSERT INTO `usr` (`name`, `age`, `gender`, `email`, `phone`, `other`, `dt`) VALUES ('$name', '$age', '$gender', '$email', '$phone', '$desc', current_timestamp());
 ";
-    echo $sql;
+    //echo $sql;
 
     if ($dbc->query($sql) == true) {
-        echo "Successfully Inserted";
+        // echo "Successfully Inserted";
+        $insert_done = true;
     } else {
         echo "Error: $sql <br> $dbc->error";
     }
@@ -54,7 +56,11 @@ if (isset($_POST['name'])) {
     <div class="container">
         <h1>Welcome to TV Form</h1>
         <p>Enter Your Details</p>
-        <p class="submitMsg">Thanks for submitting your request.</p>
+        <?php
+        if ($insert_done == true) {
+            echo "<p class='submitMsg'>Thanks for submitting your request </p>";
+        }
+        ?>
         <form action="index.php" method="post">
             <input type="text" name="name" id="name" placeholder="Enter your name">
             <input type="text" name="age" id="age" placeholder="Enter your age">
